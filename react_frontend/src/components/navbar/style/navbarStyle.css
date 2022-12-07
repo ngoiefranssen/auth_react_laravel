@@ -1,0 +1,12 @@
+.navbar-nav li .nav-Link {
+
+    text-decoration: none;
+    color: black;
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+.navbar-nav li .nav-Link:hover {
+    opacity: 1;
+    cursor: pointer;
+}
