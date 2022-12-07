@@ -39,7 +39,7 @@ export const Navbar = () =>{
                         aria-current="page"
                         to="/"
                         >
-                        Calendary
+                        Dashboard
                         </NavLink>
                     </li>
                 </ul>
@@ -48,11 +48,11 @@ export const Navbar = () =>{
                         <i className="fa fa-sign-in me-1" ></i> Login
                     </NavLink>
                 </li>
-                <li className='nav-link'>
+                {/* <li className='nav-link'>
                     <NavLink className="btn btn-light" to="/sing_up">
                         <i className="fa fa-user-plus me-2 ms" ></i> Sing-Up
                     </NavLink>
-                </li>
+                </li> */}
                 </div>
               </div>
         </nav>
