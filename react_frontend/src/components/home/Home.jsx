@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 export default function Home() {
   return (
-   "Hello"
+    <div className='container'>
+      "Hello ! I'm home"
+    </div>
   )
 };
