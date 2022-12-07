@@ -1,7 +1,6 @@
 
 export const Navbar = () =>{
     return(
-
-        "Hello ! I'm navbar"
+        <div className=""></div>
     );
 };
