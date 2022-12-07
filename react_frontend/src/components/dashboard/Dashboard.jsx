@@ -1,6 +1,6 @@
 
 
-export const Dashboard = () =>{
+export default function Dashboard() {
     return(
         <div className='container my-5'>
         <>
