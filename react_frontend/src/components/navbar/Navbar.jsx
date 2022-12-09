@@ -34,7 +34,7 @@ export const Navbar = () =>{
                           Home
                           </NavLink>
                       </li>
-                      <li className="nav-item ms-3">
+                      {/* <li className="nav-item ms-3">
                           <NavLink
                           className="nav-Link active text-uppercase"
                           aria-current="page"
@@ -42,7 +42,7 @@ export const Navbar = () =>{
                           >
                           Dashboard
                           </NavLink>
-                      </li>
+                      </li> */}
                   </ul>
                   <li className='nav-link m-2'>
                       <NavLink  className="btn btn-light" to="/login" >
