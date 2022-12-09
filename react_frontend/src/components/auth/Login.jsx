@@ -7,7 +7,7 @@ export default function Login () {
   const {password, setPassword} = useState();
 
     return(
-      <section className="vh-90" style={{ background:"" }}>
+      <section className="vh-90" style={{ background:"#FFFFFF" }}>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -27,7 +27,8 @@ export default function Login () {
                          placeholder="Enter your password...."
                          onChange={(e) => setPassword(e.target.value)}/>
                 </div>
-                <button className="btn btn-outline-primary btn-lg btn-block" type="submit">Login</button>
+                <button className="btn btn-outline-primary btn-lg btn-block"
+                        type="submit">Login</button>
               </div>
             </div>
           </div>
