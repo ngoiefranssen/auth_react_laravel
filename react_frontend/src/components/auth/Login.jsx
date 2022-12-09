@@ -1,13 +1,20 @@
+import axios from "axios";
 import { useState } from "react";
+import AuthUser from "./AuthUser";
 
 
 export default function Login () {
+
+  const {http} = AuthUser()
 
   const {email, setEmail} = useState();
   const {password, setPassword} = useState();
 
   const handlClick = () =>{
-    return email + " " + password;
+    // api call
+    http.post('/login', {email:email, password:password}).then((res) =>{
+      console.log(res.data);
+    })
   };
 
     return(
