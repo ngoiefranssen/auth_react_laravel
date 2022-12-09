@@ -5,7 +5,7 @@ import AuthUser from "./AuthUser";
 
 export default function Login () {
 
-  const {http} = AuthUser()
+  const {http, setToken} = AuthUser()
 
   const {email, setEmail} = useState();
   const {password, setPassword} = useState();
@@ -13,7 +13,7 @@ export default function Login () {
   const handlClick = () =>{
     // api call
     http.post('/login', {email:email, password:password}).then((res) =>{
-      console.log(res.data);
+      setToken(res.data.user, res.data.access_token);
     })
   };
 
