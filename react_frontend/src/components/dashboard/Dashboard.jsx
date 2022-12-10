@@ -1,7 +1,10 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import AuthUser from "../auth/AuthUser";
 
 
 export default function Dashboard() {
+
+  const {user} = AuthUser();
     return(
         <div className='container my-5'>
         <>
@@ -12,20 +15,18 @@ export default function Dashboard() {
           <caption>List of users</caption>
           <thead className='table-dark'>
             <tr>
-              <th scope="col">#</th>
+              {/* <th scope="col">#</th> */}
               <th scope="col">Name</th>
-              <th scope="col">LastName</th>
               <th scope="col">Email</th>
-              <th scope='col'>Actions</th>
             </tr>
           </thead>
           <tbody>
           
             <tr>
-              <th scope="row">1</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              {/* <th scope="row">1</th> */}
+              {/* <td>Larry</td> */}
+              <td>{user.name}</td>
+              <td>{user.email}</td>
               <td>
                 <NavLink to="">
                   <i className='fa fa-edit text-primary'></i>
