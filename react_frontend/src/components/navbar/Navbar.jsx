@@ -4,8 +4,8 @@ import {NavLink} from "react-router-dom";
 export const Navbar = () =>{
 
     return(
-        <>
-            <div className='header'>
+      <>
+        <div className='header'>
             <nav className="navbar navbar-expand-lg bg-light bg-white 
                         py-4 shadow-sm">
               <div className="container header">
@@ -56,9 +56,16 @@ export const Navbar = () =>{
                   </li> */}
                   </div>
               </div>
-        </nav>
+          </nav>
+          <div className='container'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          {/* <Route path='/dashboard' element={<Dashboard />} /> */}
+        </Routes>
       </div>
-    </>
+        </div>
+      </>
        
     );
 };
