@@ -32,6 +32,11 @@ export default function AuthUser() {
         navigate('/dashboard/Dashboard');
     };
 
+    const logoutUser = () =>{
+        sessionStorage.clear();
+        navigate('/login');
+    }
+
     const http = axios.create({
         baseURL:'http://localhost:8000/api',
         headers:{
@@ -43,6 +48,7 @@ export default function AuthUser() {
     token,
     user,
     getToken,
-    http
-  }
-}
+    http,
+    logoutUser,
+  };
+};

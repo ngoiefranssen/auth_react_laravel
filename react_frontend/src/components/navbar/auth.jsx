@@ -6,6 +6,10 @@ import Dashboard from '../dashboard/Dashboard';
 
 export const Auth = () =>{
 
+  const logoutUser = () => {
+    return "Hello"
+  }
+
     return(
       <>
         <div className='header'>
@@ -45,6 +49,15 @@ export const Auth = () =>{
                           >
                           Dashboard
                           </NavLink>
+                      </li>
+                      <li className="nav-item ms-3">
+                          <span
+                          className="nav-Link active text-uppercase"
+                          aria-current="page"
+                          role="button" onClick={logoutUser}
+                          >
+                          logout
+                          </span>
                       </li>
                   </ul>
                   {/* <li className='nav-link m-2'>
