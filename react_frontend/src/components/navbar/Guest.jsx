@@ -2,6 +2,7 @@ import './style/navbarStyle.css';
 import { Routes, Route ,NavLink} from "react-router-dom";
 import Home from "../home/Home";
 import Login from '../auth/Login';
+import Register from '../auth/Register';
 
 export const Guest = () =>{
 
@@ -48,14 +49,14 @@ export const Guest = () =>{
                   </ul>
                   <li className='nav-link m-2'>
                       <NavLink  className="btn btn-light" to="/login" >
-                          <i className="fa fa-sign-in me-1" ></i> Login
+                          <i className="fa fa-sign-in me-1" ></i> Sign in
                       </NavLink>
                   </li>
-                  {/* <li className='nav-link'>
+                  <li className='nav-link'>
                       <NavLink className="btn btn-light" to="/sing_up">
-                          <i className="fa fa-user-plus me-2 ms" ></i> Sing-Up
+                          <i className="fa fa-user-plus me-2 ms" ></i> Sing up
                       </NavLink>
-                  </li> */}
+                  </li>
                   </div>
               </div>
           </nav>
