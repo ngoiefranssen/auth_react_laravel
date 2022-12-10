@@ -32,7 +32,7 @@ export default function AuthUser() {
         navigate('/dashboard/Dashboard');
     };
 
-    const logoutUser = () =>{
+    const logout = () =>{
         sessionStorage.clear();
         navigate('/login');
     }
@@ -49,6 +49,6 @@ export default function AuthUser() {
     user,
     getToken,
     http,
-    logoutUser,
+    logout,
   };
 };
