@@ -1,8 +1,9 @@
 import './style/navbarStyle.css';
-import {NavLink} from "react-router-dom";
-import Home from "../home/Home"
+import { Routes, Route ,NavLink} from "react-router-dom";
+import Home from "../home/Home";
+import Login from '../auth/Login';
 
-export const Navbar = () =>{
+export const Guest = () =>{
 
     return(
       <>
