@@ -2,13 +2,18 @@ import './style/navbarStyle.css';
 import { Routes, Route ,NavLink} from "react-router-dom";
 import Home from "../home/Home";
 import Dashboard from '../dashboard/Dashboard';
+import AuthUser from '../auth/AuthUser';
 // import Login from '../auth/Login';
 
 export const Auth = () =>{
 
+  const {token, logout} = AuthUser();
+
   const logoutUser = () => {
-    return "Hello"
-  }
+    if(token != undefined){
+      logout();
+    };
+  };
 
     return(
       <>
