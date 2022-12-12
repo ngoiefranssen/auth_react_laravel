@@ -7,7 +7,7 @@ import AuthUser from "../auth/AuthUser";
 export default function Dashboard() {
 
   const {http} = AuthUser();
-  const {userDetails, setUserDatails} = useState();
+  const {userDetail, setUserDatails} = useState('');
 
   useEffect(() => {
     fetchUserDetails()
@@ -19,39 +19,50 @@ export default function Dashboard() {
     });
   };
 
-    return(
-        <div className='container my-5'>
-        <>
-          <button className=' btn btn-outline-primary'>Add User</button>
-        </>
-        <div className="table-responsive my-4">
-          <table className="table">
-          <caption>List of users</caption>
-          <thead className='table-dark'>
-            <tr>
-              {/* <th scope="col">#</th> */}
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-            </tr>
-          </thead>
-          <tbody>
-          
-            <tr>
-              {/* <th scope="row">1</th> */}
-              {/* <td>Larry</td> */}
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>
-                <NavLink to="">
-                  <i className='fa fa-edit text-primary'></i>
-                </NavLink>
-                <i className='fa fa-remove text-danger ms-2'></i>
-                <i className='fa fa-eye text-primary ms-2'></i>
-              </td>
-            </tr>
-          </tbody>
-          </table>
+  // ou function renderElement(){ ..... }
+  renderElement = () => {
+    if(userDetail)
+    {
+      return(
+          <div className='container my-5'>
+          <>
+            <button className=' btn btn-outline-primary'>Add User</button>
+          </>
+          <div className="table-responsive my-4">
+            <table className="table">
+            <caption>List of users</caption>
+            <thead className='table-dark'>
+              <tr>
+                {/* <th scope="col">#</th> */}
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                {/* <th scope="row">1</th> */}
+                {/* <td>Larry</td> */}
+                <td>{userDetail.name}</td>
+                <td>{userDetail.email}</td>
+                <td>
+                  <NavLink to="">
+                    <i className='fa fa-edit text-primary'></i>
+                  </NavLink>
+                  <i className='fa fa-remove text-danger ms-2'></i>
+                  <i className='fa fa-eye text-primary ms-2'></i>
+                </td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-    )
+      );
+    }
+  }
+
+  return(
+    {renderElement} // renderElement()
+  )
+ 
 }
