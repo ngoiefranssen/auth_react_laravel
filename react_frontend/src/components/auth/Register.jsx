@@ -14,7 +14,7 @@ export default function Register () {
 
   const handlClick = () =>{
     // api call
-    http.post('/sign_up', { name:names, email:email, password:password}).
+    http.post('/sign_up', { name:name, email:email, password:password}).
          then((res) =>{
         navigate('/login')
     });
