@@ -64,7 +64,7 @@ export const Guest = () =>{
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
-          {/* <Route path='/dashboard' element={<Dashboard />} /> */}
+          <Route path='/sing_up' element={<Register />} />
         </Routes>
       </div>
         </div>

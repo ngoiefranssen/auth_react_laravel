@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AuthUser from "./AuthUser";
 
 
 export default function Register () {
 
+  const navigate = useNavigate();
   const {http, setToken} = AuthUser()
   const {name, setName} = useState();
   const {email, setEmail} = useState();
@@ -12,8 +14,9 @@ export default function Register () {
 
   const handlClick = () =>{
     // api call
-    http.post('/login', {email:email, password:password}).then((res) =>{
-      setToken(res.data.user, res.data.access_token);
+    http.post('/sign_up', { name:names, email:email, password:password}).
+         then((res) =>{
+        navigate('/login')
     });
   };
 
@@ -43,8 +46,8 @@ export default function Register () {
                          placeholder="Enter your password...."
                          onChange={(e) => setPassword(e.target.value)}/>
                 </div>
-                <button className="btn btn-outline-primary btn-lg btn-block"
-                       onClick={handlClick} type="submit">Login</button>
+                <button className="btn btn-outline-dark btn-lg btn-block"
+                       onClick={handlClick} type="submit">Register</button>
               </div>
             </div>
           </div>

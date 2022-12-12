@@ -38,7 +38,7 @@ export default function Login () {
                          placeholder="Enter your password...."
                          onChange={(e) => setPassword(e.target.value)}/>
                 </div>
-                <button className="btn btn-outline-primary btn-lg btn-block"
+                <button className="btn btn-outline-dark btn-lg btn-block"
                        onClick={handlClick} type="submit">Login</button>
               </div>
             </div>

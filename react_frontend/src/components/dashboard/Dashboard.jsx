@@ -1,10 +1,24 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AuthUser from "../auth/AuthUser";
 
 
 export default function Dashboard() {
 
-  const {user} = AuthUser();
+  const {user, http} = AuthUser();
+  const {userDetails, setUserDatails} = useState();
+
+  useEffect(() => {
+    fetchUserDetails()
+  },[]);
+
+  const fetchUserDetails = () =>{
+    http.get('/me').then((res) =>{
+      console.log(res.data);
+    });
+  };
+
     return(
         <div className='container my-5'>
         <>

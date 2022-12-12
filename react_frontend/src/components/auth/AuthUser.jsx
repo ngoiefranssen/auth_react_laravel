@@ -41,8 +41,10 @@ export default function AuthUser() {
         baseURL:'http://localhost:8000/api',
         headers:{
             "content-type" : "application/json",
+            "Authorization" : `Bearer ${token}`,
         },
     });
+    
   return {
     setToken:saveToken,
     token,
