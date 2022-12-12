@@ -6,7 +6,7 @@ import AuthUser from "../auth/AuthUser";
 
 export default function Dashboard() {
 
-  const {user, http} = AuthUser();
+  const {http} = AuthUser();
   const {userDetails, setUserDatails} = useState();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Dashboard() {
 
   const fetchUserDetails = () =>{
     http.get('/me').then((res) =>{
-      console.log(res.data);
+      setUserDatails(res.data)
     });
   };
 
